@@ -12,9 +12,13 @@ public class Program {
         ProductRepository repo = Repositories.getInstance().getProductRepository();
         for(Product p : repo.getProducts()){
             System.out.println(p.getName());
+            System.out.println(p.getPrice());
         }
         Product p = new Product("test", 22.33f);
         repo.addProduct(p);
         System.out.println(repo.getProduct("yoga").getPrice());
+        repo.updateProduct("XPS", 3199.99f);
+        repo.deleteProduct(p);
+
     }
 }

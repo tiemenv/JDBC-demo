@@ -15,6 +15,8 @@ public class MySqlProductRepository implements ProductRepository {
     private static final String SQL_ADD_PRODUCT = "insert into products(name, price) values(?,?)";
     private static final String SQL_GET_PRODUCTS = "select * from products";
     private static final String SQL_GET_PRODUCT = "select * from products where name like ?";
+    private static final String SQL_UPDATE_PRODUCT = "update products set price = ? where name like ?";
+    private static final String SQL_DELETE_PRODUCT = "delete from products where name = ?";
 
     @Override
     public void addProduct(Product p) {
@@ -62,9 +64,8 @@ public class MySqlProductRepository implements ProductRepository {
                 PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_GET_PRODUCT)
         ) {
             prep.setString(1, name);
-            System.out.println("Got this far");
             try (ResultSet rs = prep.executeQuery()) {
-                if(rs.next()) {
+                if (rs.next()) {
                     price = rs.getFloat("price");
                 }
                 p = new Product(name, price);
@@ -76,12 +77,28 @@ public class MySqlProductRepository implements ProductRepository {
     }
 
     @Override
-    public void updateProduct(Product p) {
+    public void updateProduct(String name, float newPrice) {
+        try (
+                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_UPDATE_PRODUCT)
+        ) {
+            prep.setFloat(1, newPrice);
+            prep.setString(2, name);
+            prep.executeUpdate();
 
+        } catch (SQLException ex) {
+            throw new ProductsException("Can't update product in DB", ex);
+        }
     }
 
     @Override
     public void deleteProduct(Product p) {
-
+        try (
+                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_DELETE_PRODUCT)
+        ) {
+            prep.setString(1, p.getName());
+            prep.executeUpdate();
+        } catch (SQLException ex) {
+            throw new ProductsException("Can't update product in DB", ex);
+        }
     }
 }
