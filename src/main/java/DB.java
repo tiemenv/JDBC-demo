@@ -27,9 +27,16 @@ public class DB {
                 }
             }
 
-//            sql = "insert into shop(name, price) values(?,?)";
+            SQL = "insert into products(name, price) values(?,?)";
+            System.out.println("Attempting update");
+            try(PreparedStatement prep = con.prepareStatement(SQL)){
+                prep.setString(1, "B5400");
+                prep.setFloat(2, 349.99f);
+                prep.executeUpdate();
+                System.out.println("Updated");
+            }
         } catch (SQLException ex) {
-
+    ex.printStackTrace();
         }
     }
 
