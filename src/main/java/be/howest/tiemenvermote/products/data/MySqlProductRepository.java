@@ -3,6 +3,7 @@ package be.howest.tiemenvermote.products.data;
 import be.howest.tiemenvermote.products.domain.Product;
 import be.howest.tiemenvermote.products.util.ProductsException;
 
+import javax.xml.transform.Result;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,6 +14,7 @@ public class MySqlProductRepository implements ProductRepository {
 
     private static final String SQL_ADD_PRODUCT = "insert into products(name, price) values(?,?)";
     private static final String SQL_GET_PRODUCTS = "select * from products";
+    private static final String SQL_GET_PRODUCT = "select * from products where name like ?";
 
     @Override
     public void addProduct(Product p) {
@@ -30,7 +32,7 @@ public class MySqlProductRepository implements ProductRepository {
 
     @Override
     public List<Product> getProducts() {
-    List<Product> products = new ArrayList<>();
+        List<Product> products = new ArrayList<>();
         try (
                 PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_GET_PRODUCTS)
 
@@ -46,7 +48,7 @@ public class MySqlProductRepository implements ProductRepository {
                 }
                 return products;
             }
-        } catch (SQLException ex){
+        } catch (SQLException ex) {
             throw new ProductsException("Unable to fetch products from DB", ex);
         }
 
@@ -54,7 +56,23 @@ public class MySqlProductRepository implements ProductRepository {
 
     @Override
     public Product getProduct(String name) {
-        return null;
+        Product p;
+        float price = 0f;
+        try (
+                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_GET_PRODUCT)
+        ) {
+            prep.setString(1, name);
+            System.out.println("Got this far");
+            try (ResultSet rs = prep.executeQuery()) {
+                if(rs.next()) {
+                    price = rs.getFloat("price");
+                }
+                p = new Product(name, price);
+                return p;
+            }
+        } catch (SQLException ex) {
+            throw new ProductsException("Can't fetch product from DB", ex);
+        }
     }
 
     @Override

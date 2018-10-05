@@ -1,4 +1,3 @@
-import be.howest.tiemenvermote.products.data.MySqlProductRepository;
 import be.howest.tiemenvermote.products.data.ProductRepository;
 import be.howest.tiemenvermote.products.data.Repositories;
 import be.howest.tiemenvermote.products.domain.Product;
@@ -14,5 +13,8 @@ public class Program {
         for(Product p : repo.getProducts()){
             System.out.println(p.getName());
         }
+        Product p = new Product("test", 22.33f);
+        repo.addProduct(p);
+        System.out.println(repo.getProduct("yoga").getPrice());
     }
 }
