@@ -3,7 +3,6 @@ package be.howest.tiemenvermote.products.data;
 import be.howest.tiemenvermote.products.domain.Product;
 import be.howest.tiemenvermote.products.util.ProductsException;
 
-import javax.xml.transform.Result;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -77,12 +76,12 @@ public class MySqlProductRepository implements ProductRepository {
     }
 
     @Override
-    public void updateProduct(String name, float newPrice) {
+    public void updateProduct(Product p) {
         try (
                 PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_UPDATE_PRODUCT)
         ) {
-            prep.setFloat(1, newPrice);
-            prep.setString(2, name);
+            prep.setFloat(1, p.getPrice());
+            prep.setString(2, p.getName());
             prep.executeUpdate();
 
         } catch (SQLException ex) {

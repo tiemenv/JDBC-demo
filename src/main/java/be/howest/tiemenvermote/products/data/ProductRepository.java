@@ -9,7 +9,7 @@ public interface ProductRepository {
     void addProduct(Product p);
     List<Product> getProducts();
     Product getProduct(String name);
-    void updateProduct(String name, float newPrice);
+    void updateProduct(Product p);
     void deleteProduct(Product p);
 
 

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c798094-bf17-4241-9819-1adc56f86889" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/be/howest/tiemenvermote/products/data/MySqlProductRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/howest/tiemenvermote/products/data/MySqlProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/howest/tiemenvermote/products/data/MySqlProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/howest/tiemenvermote/products/data/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/howest/tiemenvermote/products/data/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -26,32 +32,33 @@
         <counts>
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="1" />
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="36" />
           <entry key="gradle" value="68" />
-          <entry key="java" value="4188" />
+          <entry key="java" value="4773" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="68" />
-          <entry key="JAVA" value="4188" />
+          <entry key="JAVA" value="4773" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
@@ -62,21 +69,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="291">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+              <folding>
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="266">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#66#67#0" expanded="true" />
-                <element signature="e#94#95#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/Repositories.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="140">
               <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding>
                 <element signature="e#307#308#0" expanded="true" />
@@ -98,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="196">
               <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -110,10 +121,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlProductRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+            <state relative-caret-position="154">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/be/howest/tiemenvermote/products/data/MySqlProductRepositoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/ProductRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="56">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,12 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/util/ProductsException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
+            <state relative-caret-position="42">
               <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-              <folding>
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,6 +172,7 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="Singleton" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -527,16 +548,17 @@
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/Connection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/util/BooksException.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/BookRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlBookRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/Repositories.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Program.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/ProductRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlProductRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java" />
+        <option value="$PROJECT_DIR$/src/test/java/be/howest/tiemenvermote/products/data/MySqlProductRepositoryTest.java" />
       </list>
     </option>
   </component>
@@ -549,7 +571,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="y" value="4" />
-    <option name="width" value="681" />
+    <option name="width" value="1364" />
     <option name="height" value="763" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -559,7 +581,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -626,19 +647,45 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDBC" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDBC" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538781306540" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538836265176" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="be.howest.tiemenvermote.products.data" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -652,14 +699,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Program">
-    <configuration name="DB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DB" />
-      <module name="JDBC_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MySqlProductRepositoryTest.addProduct">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Program" />
       <module name="JDBC_main" />
@@ -667,14 +707,82 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MySqlProductRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.howest.tiemenvermote.products.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.howest.tiemenvermote.products.data" />
+      <option name="MAIN_CLASS_NAME" value="be.howest.tiemenvermote.products.data.MySqlProductRepositoryTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySqlProductRepositoryTest.addProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.howest.tiemenvermote.products.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.howest.tiemenvermote.products.data" />
+      <option name="MAIN_CLASS_NAME" value="be.howest.tiemenvermote.products.data.MySqlProductRepositoryTest" />
+      <option name="METHOD_NAME" value="addProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySqlProductRepositoryTest.getProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.howest.tiemenvermote.products.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.howest.tiemenvermote.products.data" />
+      <option name="MAIN_CLASS_NAME" value="be.howest.tiemenvermote.products.data.MySqlProductRepositoryTest" />
+      <option name="METHOD_NAME" value="getProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySqlProductRepositoryTest.getProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.howest.tiemenvermote.products.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.howest.tiemenvermote.products.data" />
+      <option name="MAIN_CLASS_NAME" value="be.howest.tiemenvermote.products.data.MySqlProductRepositoryTest" />
+      <option name="METHOD_NAME" value="getProducts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.DB" />
       <item itemvalue="Application.Program" />
+      <item itemvalue="JUnit.MySqlProductRepositoryTest.getProducts" />
+      <item itemvalue="JUnit.MySqlProductRepositoryTest.getProduct" />
+      <item itemvalue="JUnit.MySqlProductRepositoryTest" />
+      <item itemvalue="JUnit.MySqlProductRepositoryTest.addProduct" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MySqlProductRepositoryTest.addProduct" />
+        <item itemvalue="JUnit.MySqlProductRepositoryTest.getProduct" />
+        <item itemvalue="JUnit.MySqlProductRepositoryTest" />
+        <item itemvalue="JUnit.MySqlProductRepositoryTest.getProducts" />
         <item itemvalue="Application.Program" />
-        <item itemvalue="Application.DB" />
       </list>
     </recent_temporary>
   </component>
@@ -690,17 +798,41 @@
       <updated>1538740314970</updated>
       <workItem from="1538740317099" duration="9477000" />
       <workItem from="1538772920302" duration="6539000" />
+      <workItem from="1538833606047" duration="2672000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="MySqlProductRepositoryTest_getProducts - 2018.10.06 at 16h 13m 11s.xml">
+      <configuration name="MySqlProductRepositoryTest.getProducts" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySqlProductRepositoryTest_getProduct - 2018.10.06 at 16h 17m 19s.xml">
+      <configuration name="MySqlProductRepositoryTest.getProduct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySqlProductRepositoryTest - 2018.10.06 at 16h 17m 47s.xml">
+      <configuration name="MySqlProductRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySqlProductRepositoryTest_getProduct - 2018.10.06 at 16h 17m 57s.xml">
+      <configuration name="MySqlProductRepositoryTest.getProduct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySqlProductRepositoryTest_getProduct - 2018.10.06 at 16h 22m 01s.xml">
+      <configuration name="MySqlProductRepositoryTest.getProduct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySqlProductRepositoryTest_getProduct - 2018.10.06 at 16h 24m 10s.xml">
+      <configuration name="MySqlProductRepositoryTest.getProduct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MySqlProductRepositoryTest_addProduct - 2018.10.06 at 16h 31m 07s.xml">
+      <configuration name="MySqlProductRepositoryTest.addProduct" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16016000" />
+    <option name="totallyTimeSpent" value="18688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="4" width="1364" height="763" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25757575" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -746,48 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/util/ProductsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#209#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/Repositories.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="140">
           <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
           <folding>
             <element signature="e#307#308#0" expanded="true" />
@@ -796,10 +890,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/util/ProductsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/ProductRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="56">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -808,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/data/MySqlProductRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+        <state relative-caret-position="154">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -818,12 +929,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="266">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#66#67#0" expanded="true" />
-            <element signature="e#94#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/howest/tiemenvermote/products/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be/howest/tiemenvermote/products/data/MySqlProductRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
           </folding>
         </state>
       </provider>

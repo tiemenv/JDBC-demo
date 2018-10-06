@@ -17,7 +17,8 @@ public class Program {
         Product p = new Product("test", 22.33f);
         repo.addProduct(p);
         System.out.println(repo.getProduct("yoga").getPrice());
-        repo.updateProduct("XPS", 3199.99f);
+        Product p2 = new Product("XPS", 4299.99f);
+        repo.updateProduct(p2);
         repo.deleteProduct(p);
 
     }
