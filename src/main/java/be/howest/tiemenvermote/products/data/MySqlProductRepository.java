@@ -3,6 +3,7 @@ package be.howest.tiemenvermote.products.data;
 import be.howest.tiemenvermote.products.domain.Product;
 import be.howest.tiemenvermote.products.util.ProductsException;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,12 +21,15 @@ public class MySqlProductRepository implements ProductRepository {
     @Override
     public void addProduct(Product p) {
 
-        System.out.println("Attempting update");
-        try (PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_ADD_PRODUCT)) {
+
+        //TODO: con en prep moeten blijkbaar "van elkaar los" bestaan omdat de connectie anders niet gesloten wordt? Uitleg?
+        try (
+                Connection con = MySqlConnection.getConnection();
+                PreparedStatement prep = con.prepareStatement(SQL_ADD_PRODUCT)) {
             prep.setString(1, p.getName());
             prep.setFloat(2, p.getPrice());
             prep.executeUpdate();
-            System.out.println("Updated");
+
         } catch (SQLException ex) {
             throw new ProductsException("Unable to add book to DB", ex);
         }
@@ -34,8 +38,11 @@ public class MySqlProductRepository implements ProductRepository {
     @Override
     public List<Product> getProducts() {
         List<Product> products = new ArrayList<>();
+
+
         try (
-                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_GET_PRODUCTS)
+                Connection con = MySqlConnection.getConnection();
+                PreparedStatement prep = con.prepareStatement(SQL_GET_PRODUCTS);
 
         ) {
 
@@ -55,12 +62,14 @@ public class MySqlProductRepository implements ProductRepository {
 
     }
 
+    //TODO: goeie implementatie?
     @Override
     public Product getProduct(String name) {
         Product p;
         float price = 0f;
         try (
-                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_GET_PRODUCT)
+                Connection con = MySqlConnection.getConnection();
+                PreparedStatement prep = con.prepareStatement(SQL_GET_PRODUCT)
         ) {
             prep.setString(1, name);
             try (ResultSet rs = prep.executeQuery()) {
@@ -75,10 +84,12 @@ public class MySqlProductRepository implements ProductRepository {
         }
     }
 
+    //TODO: goeie implementatie?
     @Override
     public void updateProduct(Product p) {
         try (
-                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_UPDATE_PRODUCT)
+                Connection con = MySqlConnection.getConnection();
+                PreparedStatement prep = con.prepareStatement(SQL_UPDATE_PRODUCT)
         ) {
             prep.setFloat(1, p.getPrice());
             prep.setString(2, p.getName());
@@ -89,10 +100,12 @@ public class MySqlProductRepository implements ProductRepository {
         }
     }
 
+    //TODO: goeie implementatie?
     @Override
     public void deleteProduct(Product p) {
         try (
-                PreparedStatement prep = MySqlConnection.getConnection().prepareStatement(SQL_DELETE_PRODUCT)
+                Connection con = MySqlConnection.getConnection();
+                PreparedStatement prep = con.prepareStatement(SQL_DELETE_PRODUCT)
         ) {
             prep.setString(1, p.getName());
             prep.executeUpdate();
