@@ -1,11 +1,24 @@
 import be.howest.tiemenvermote.products.data.ProductRepository;
 import be.howest.tiemenvermote.products.data.Repositories;
 import be.howest.tiemenvermote.products.domain.Product;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Program {
+public class Program extends Application {
 
     public static void main(String[] args) {
-        new Program().run();
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/ManageProducts.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void run(){
