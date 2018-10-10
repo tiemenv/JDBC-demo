@@ -9,14 +9,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import javax.swing.text.html.Option;
-import javax.xml.soap.Text;
 import java.util.List;
-import java.util.Observable;
 import java.util.Optional;
 
 public class ManageProducts {
-
 
     private ObservableList<Product> observableProductsList;
 
@@ -40,33 +36,33 @@ public class ManageProducts {
 
     @FXML
     void addProduct(ActionEvent event) {
-        //TODO: variabelen krijgen default values mee, dus bij error komt er wel een nieuw product id db met deze default values, hoe beter opvangen?
-        String name = "";
-        float price = 0f;
+
         System.out.println("add");
         TextInputDialog tid = new TextInputDialog();
         tid.setHeaderText("Enter product name");
         Optional<String> nameString = tid.showAndWait();
-        if (nameString.isPresent()){
-            name = nameString.get();
-        } else {
-            Alert al = new Alert(Alert.AlertType.ERROR);
-            al.setContentText("Error001");
-            al.showAndWait();
-        }
+
         TextInputDialog nid = new TextInputDialog();
         nid.setHeaderText("Set price");
         Optional<String> priceAsString = nid.showAndWait();
-        if(priceAsString.isPresent()){
-            price = Float.parseFloat(priceAsString.get());
-        } else {
-            Alert al = new Alert(Alert.AlertType.ERROR);
-            al.setContentText("Error002");
-            al.showAndWait();
+
+
+        if (nameString.isPresent() && priceAsString.isPresent()) {
+            String name = nameString.get();
+            try {
+                float price = Float.parseFloat(priceAsString.get());
+                Product p = new Product(name, price);
+                Repositories.getInstance().getProductRepository().addProduct(p);
+                observableProductsList.add(p);
+            } catch (Exception ex) {
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setContentText("Error003");
+                al.showAndWait();
+            }
+
         }
-        Product p = new Product(name, price);
-        Repositories.getInstance().getProductRepository().addProduct(p);
-        initialize();
+
+
     }
 
     @FXML
@@ -86,12 +82,11 @@ public class ManageProducts {
     }
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         List<Product> products = Repositories.getInstance().getProductRepository().getProducts();
         observableProductsList = FXCollections.observableArrayList(products);
         lstProducts.setItems(observableProductsList);
     }
-
 
 
 }

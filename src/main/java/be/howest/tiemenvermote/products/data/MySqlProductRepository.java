@@ -21,8 +21,6 @@ public class MySqlProductRepository implements ProductRepository {
     @Override
     public void addProduct(Product p) {
 
-
-        //TODO: con en prep moeten blijkbaar "van elkaar los" bestaan omdat de connectie anders niet gesloten wordt? Uitleg?
         try (
                 Connection con = MySqlConnection.getConnection();
                 PreparedStatement prep = con.prepareStatement(SQL_ADD_PRODUCT)) {
@@ -65,8 +63,7 @@ public class MySqlProductRepository implements ProductRepository {
     //TODO: goeie implementatie?
     @Override
     public Product getProduct(String name) {
-        Product p;
-        float price = 0f;
+
         try (
                 Connection con = MySqlConnection.getConnection();
                 PreparedStatement prep = con.prepareStatement(SQL_GET_PRODUCT)
@@ -74,10 +71,11 @@ public class MySqlProductRepository implements ProductRepository {
             prep.setString(1, name);
             try (ResultSet rs = prep.executeQuery()) {
                 if (rs.next()) {
-                    price = rs.getFloat("price");
+                    float price = rs.getFloat("price");
+                    Product p = new Product(name, price);
+                    return p;
                 }
-                p = new Product(name, price);
-                return p;
+                return null;
             }
         } catch (SQLException ex) {
             throw new ProductsException("Can't fetch product from DB", ex);

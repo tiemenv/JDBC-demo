@@ -22,7 +22,6 @@ public class MockProductRepository implements ProductRepository  {
     @Override
     public void addProduct(Product p) {
     boolean added = products.add(p);
-    //TODO: welk soort expectie moet ik hier throwen? Deze exceptie verwacht msg en innerException
     if (!added) {
         throw new ProductsException("Failed to add book");
     }
@@ -33,9 +32,14 @@ public class MockProductRepository implements ProductRepository  {
         return new ArrayList<>(products);
     }
 
-    //TODO: hoe dit implementeren? Zoeken in een Set????? Beter andere Collection?
     @Override
     public Product getProduct(String name) {
+        for (Product product : this.getProducts()){
+            if(product.getName().equals(name)){
+                return product;
+            }
+        }
+        System.out.println("Can't find product with name " + name);
         return null;
     }
 
