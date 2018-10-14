@@ -7,14 +7,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.List;
-import java.util.Optional;
 
 public class ManageProducts {
 
-    private ObservableList<Product> observableProductsList;
+    public static ObservableList<Product> observableProductsList;
 
     @FXML
     private ListView<Product> lstProducts;
@@ -35,51 +40,47 @@ public class ManageProducts {
     private Button btnExit;
 
     @FXML
-    void addProduct(ActionEvent event) {
-
-        System.out.println("add");
-        TextInputDialog tid = new TextInputDialog();
-        tid.setHeaderText("Enter product name");
-        Optional<String> nameString = tid.showAndWait();
-
-        TextInputDialog nid = new TextInputDialog();
-        nid.setHeaderText("Set price");
-        Optional<String> priceAsString = nid.showAndWait();
-
-
-        if (nameString.isPresent() && priceAsString.isPresent()) {
-            String name = nameString.get();
-            try {
-                float price = Float.parseFloat(priceAsString.get());
-                Product p = new Product(name, price);
-                Repositories.getInstance().getProductRepository().addProduct(p);
-                observableProductsList.add(p);
-            } catch (Exception ex) {
-                Alert al = new Alert(Alert.AlertType.ERROR);
-                al.setContentText("Error003");
-                al.showAndWait();
-            }
-
-        }
-
-
-    }
-
-    @FXML
-    void deleteProduct(ActionEvent event) {
-        System.out.println("delete");
-    }
-
-    @FXML
-    void exitApplication(ActionEvent event) {
-        System.out.println("exit");
-        Platform.exit();
+    void addProduct(ActionEvent event) throws IOException {
+        Product newProduct = dialogAddProduct(null);
+        Repositories.getInstance().getProductRepository().addProduct(newProduct);
+        observableProductsList.add(newProduct);
     }
 
     @FXML
     void updateProduct(ActionEvent event) {
         System.out.println("update");
+        Product product = lstProducts.getSelectionModel().getSelectedItem();
+        System.out.println(product);
     }
+
+    //TODO: automatically recognize whether product should be added or updated
+    Product dialogAddProduct(Product p) throws IOException {
+        URL fxmlURL = ClassLoader.getSystemResource("fxml/ProductDetail.fxml");
+        FXMLLoader rootLoader = new FXMLLoader(fxmlURL);
+        Pane root = rootLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        ProductDetail ctrl = rootLoader.getController();
+        ctrl.setCurrentStage(stage);
+        stage.showAndWait();
+        return ctrl.getP();
+    }
+
+
+
+    @FXML
+    void deleteProduct(ActionEvent event) {
+        Product product = lstProducts.getSelectionModel().getSelectedItem();
+        Repositories.getInstance().getProductRepository().deleteProduct(product);
+        observableProductsList.remove(product);
+    }
+
+    @FXML
+    void exitApplication(ActionEvent event) {
+        Platform.exit();
+    }
+
 
     @FXML
     public void initialize() {
@@ -87,6 +88,4 @@ public class ManageProducts {
         observableProductsList = FXCollections.observableArrayList(products);
         lstProducts.setItems(observableProductsList);
     }
-
-
 }
